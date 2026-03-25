@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avicenne Pesseu — Data Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+      border-bottom: 1px solid #21262d;
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+
+    header .title {
+      font-size: 1.1rem;
+      color: #58a6ff;
+      margin-top: 8px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    header .subtitle {
+      font-size: 0.95rem;
+      color: #8b949e;
+      margin-top: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header .links {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    header .links a {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #e6edf3;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    header .links a:hover {
+      background: #30363d;
+      text-decoration: none;
+    }
+
+    /* SECTIONS */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section { margin-bottom: 56px; }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #f0f6fc;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 10px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .skill-card h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+
+    .skill-card ul li::before {
+      content: "› ";
+      color: #58a6ff;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 24px;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: #58a6ff;
+    }
+
+    .project-card .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-size: 1.05rem;
+      color: #f0f6fc;
+    }
+
+    .project-card .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #1f2937;
+      border: 1px solid #374151;
+      color: #9ca3af;
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+
+    .tag.highlight {
+      background: #0d2137;
+      border-color: #1d4ed8;
+      color: #60a5fa;
+    }
+
+    .project-card p {
+      color: #8b949e;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .project-card .project-link {
+      font-size: 0.85rem;
+      color: #58a6ff;
+    }
+
+    /* ABOUT */
+    .about-text {
+      color: #8b949e;
+      font-size: 0.95rem;
+      max-width: 700px;
+    }
+
+    .about-text strong {
+      color: #e6edf3;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #484f58;
+      font-size: 0.85rem;
+      border-top: 1px solid #21262d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avicenne Pesseu</h1>
+    <div class="title">Data Engineer · Industrie 4.0 & Systèmes Critiques</div>
+    <p class="subtitle">
+      Diplômé en Gestion et Analyse des Données Massives · Spécialiste Python ·
+      Passionné par la maintenance prédictive, l'IoT industriel et les systèmes embarqués.
+    </p>
+    <div class="links">
+      <a href="https://github.com/apesseu" target="_blank">GitHub</a>
+      <a href="mailto:votre@email.com">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- À PROPOS -->
+    <section>
+      <h2>À propos</h2>
+      <p class="about-text">
+        Ingénieur de données avec une double culture <strong>aéronautique / aérospatiale</strong>
+        et <strong>Big Data</strong>. Je conçois des outils de calcul normatif, des pipelines de données
+        et des frameworks d'évaluation IA orientés vers les secteurs industriels exigeants :
+        défense, énergie, aéronautique et maintenance 4.0.
+        <br/><br/>
+        Mon approche : <strong>des données utiles au service de la décision terrain</strong> —
+        de la modélisation algorithmique jusqu'au déploiement en production.
+      </p>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section>
+      <h2>Compétences</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>Langages</h3>
+          <ul>
+            <li>Python 3.11+</li>
+            <li>SQL</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Data & IA</h3>
+          <ul>
+            <li>Pandas / NumPy</li>
+            <li>Dash / Plotly</li>
+            <li>LLM Evaluation</li>
+            <li>MLOps</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Outils & DevOps</h3>
+          <ul>
+            <li>Docker</li>
+            <li>GitHub Actions (CI/CD)</li>
+            <li>Poetry</li>
+            <li>pytest</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Industrie</h3>
+          <ul>
+            <li>Normes EN 13031-1</li>
+            <li>Eurocodes</li>
+            <li>Calcul de structures</li>
+            <li>Maintenance prédictive</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section>
+      <h2>Projets</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>serre-calc</h3>
+            <div class="tags">
+              <span class="tag highlight">Python</span>
+              <span class="tag">PySide6</span>
+              <span class="tag">pytest</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+          <p>
+            Calculateur normatif complet pour serres agricoles selon EN 13031-1:2019.
+            Interface graphique PySide6 + mode CLI, exports multi-formats (PDF, Excel, JSON, CSV),
+            tests de régression et architecture en couches. Projet livrable en conditions réelles.
+          </p>
+          <a class="project-link" href="https://github.com/apesseu/serre-calc" target="_blank">→ Voir le code sur GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>llm-judge-security-evaluation</h3>
+            <div class="tags">
+              <span class="tag highlight">MLOps</span>
+              <span class="tag">Docker</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Sécurité</span>
+            </div>
+          </div>
+          <p>
+            Framework LLM-as-Judge pour l'évaluation automatisée de la sécurité de chatbots IA.
+            Conteneurisé avec Docker, orienté MLOps. Applicable à l'audit de systèmes IA en environnement critique.
+          </p>
+          <a class="project-link" href="https://github.com/apesseu/llm-judge-security-evaluation" target="_blank">→ Voir le code sur GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>atlas-entraxes</h3>
+            <div class="tags">
+              <span class="tag highlight">Dash</span>
+              <span class="tag">Python</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">Open Data</span>
+            </div>
+          </div>
+          <p>
+            Application web interactive (Dash) pour la consultation des réglementations de serres
+            par département français. Exploration de données géographiques et normatives sur carte interactive.
+          </p>
+          <a class="project-link" href="https://github.com/apesseu/atlas-entraxes" target="_blank">→ Voir le code sur GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>serre-agricole-en13031</h3>
+            <div class="tags">
+              <span class="tag highlight">GitHub Actions</span>
+              <span class="tag">PlantUML</span>
+              <span class="tag">Documentation</span>
+            </div>
+          </div>
+          <p>
+            Modélisation des algorithmes de dimensionnement de serres (EN 13031-1 / Eurocodes)
+            en diagrammes PlantUML. Pipeline CI/CD automatisé pour génération et déploiement
+            continu sur GitHub Pages.
+          </p>
+          <a class="project-link" href="https://github.com/apesseu/serre-agricole-en13031" target="_blank">→ Voir le code sur GitHub</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Avicenne Pesseu · <a href="https://github.com/apesseu">github.com/apesseu</a>
+  </footer>
+
+</body>
+</html>
